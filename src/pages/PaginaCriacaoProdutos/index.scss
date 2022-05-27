@@ -1,0 +1,16 @@
+// media 
+@media screen and (max-width: 768px) {
+    .div-nome-cat{
+        flex-direction: column;
+        cat-prod{
+            width: 100% !important;
+        }
+    }
+    .lat-long{
+        flex-direction: column;
+    }
+    .politicas{
+        flex-direction: column;
+    }
+
+}

@@ -1,0 +1,126 @@
+@import "../../variables/colors.scss";
+@import "../../variables/typography.scss";
+
+#LoginForm{
+    display: flex;
+    height: calc(100vh - 80px);
+    justify-content: center;
+    align-items: center;
+    .container-loginForm{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    p{
+        margin: 0;
+        text-align: center;
+        font-size: $roboto-medio-12;
+        font-weight: $roboto-medio-12-font-weight;
+    }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .user-details{
+                min-width: 300px;
+                max-width: 448px;
+                width: 100%;
+            }
+            .user-details .input-box{
+                position: relative;
+                margin: 20px 16px 12px 16px;
+                height: 61px;  
+            }
+            .user-details .input-box.email,
+            .user-details .input-box.password{
+                height: 61px;
+                font-size: $roboto-medio-12;
+                font-weight: $roboto-medio-12-font-weight;
+            }
+            .user-details .input-box input{
+                height: 45px;
+                width: 100%;
+                outline: none;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                padding-left: 15px;
+                padding-right: 48px;
+                font-size: 16px;
+            }
+            .input-box.password > a{
+                position: absolute;
+                top: 50%;
+                right: 12px;
+                #invisible{
+                    display: none;
+                }
+            }
+            .error-message{
+                visibility: hidden;
+            }
+            input.error{
+                background-color: #FFE1E1;
+                border: 1px solid #FF0000 !important;
+                ~ .error-message{
+                    margin-top: 10px;
+                    color: #FF0000;
+                }
+            }
+            .user-details .input-box label{
+                width: 100%;
+                font-weight: 500;
+                margin-bottom: 2px;
+            }
+            .button{
+                height: 40px;
+                width: 206px;
+                margin-bottom: 7px;
+                margin-top: 50px;
+                button{
+                    height: 40px;
+                    width: 100%;
+                    background-color: $color-principal;
+                    border: none;
+                    border-radius: 5px;
+                    color: $white;
+                    font-size: $roboto-bold-16;
+                    font-weight: $roboto-bold-16-font-weight;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                        &:active{
+                            top: 1px
+                        }
+                        &:hover{
+                            background: #0d6efd;
+                            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+                        }
+                    }
+            }
+        }
+        p{
+            a{
+                color: #4285F4;
+            }
+        }
+        
+
+    }
+
+    .container-loginForm .title{
+        font-size: $roboto-bold-24;
+        font-weight: $roboto-bold-24-font-weight;
+        text-align: center;
+        color: $color-principal;
+    }
+}
+
+@media (max-width: 768px) {
+    .button{
+        min-width: 300px;
+        max-width: 448px;    
+        padding: 0 16px 0 16px;
+        width: 100% !important;
+    }
+}

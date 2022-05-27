@@ -1,0 +1,45 @@
+@import '../../variables/colors.scss';
+@import '../../variables/typography.scss';
+
+.pagination-container {
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    margin: 0;
+    font-size: $roboto-medio-12;
+    font-weight: $roboto-medio-12-font-weight;
+  }
+  .pagination-box {
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .pagination-button {
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      background-color: #f3f1ed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #383b58;
+      cursor: pointer;
+      .flip-horizontal {
+        transform: rotate(180deg);
+      }
+      img {
+        filter: brightness(0) saturate(100%) invert(26%) sepia(19%) saturate(7395%)
+          hue-rotate(234deg) brightness(89%) contrast(92%);
+        }
+        &:disabled {
+          border: 1px solid #c2c2c2;
+          cursor: unset;
+          img {
+            filter: none;
+          }
+      }
+    }
+  }
+}

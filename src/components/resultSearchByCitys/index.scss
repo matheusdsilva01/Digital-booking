@@ -1,0 +1,23 @@
+@import '../../variables/colors.scss';
+@import '../../variables/typography.scss';
+
+.container-results{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0 23px 0;
+    background-color: #EBEBEE;
+    min-height: 80vh;
+    .container-cards{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1190px;
+        min-width: 280px;
+        padding: 0 25px 0 25px;
+    }
+    .title-container-results{
+        font-size: $roboto-bold-24;
+        font-weight: $roboto-bold-24-font-weight;
+    }
+}

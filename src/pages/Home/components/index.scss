@@ -1,0 +1,93 @@
+@import '../../../variables/colors.scss';
+@import '../../../variables/typography.scss';
+
+.container-category{
+    background-color: #EBEBEE;
+    padding: 40px; 
+    .active.carousel-item{
+        display: flex ;
+        justify-content: space-around;
+    }
+    .carousel-item-next.carousel-item-start, .carousel-item-prev.carousel-item-end{
+        display: flex;
+        justify-content: space-around;
+    }
+    .active.carousel-item-start.carousel-item{
+        justify-content: space-around;
+    }
+    .carousel-control-next, .carousel-control-prev{
+        width: 50px;
+    }
+    .carousel-indicators{
+        margin-bottom: 0;
+    }
+}
+.title-container-category{
+    font-size: $roboto-bold-24;
+    font-weight: $roboto-bold-24-font-weight;
+    color: $color2;
+}
+.container-card-category{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    place-items: center;
+}
+.card-category{
+    cursor: pointer;
+    width: 310px;
+    background-color: $white;
+    box-shadow: 0 4px 4px #00000025;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    &:hover{
+        transform: scale3d(1.02, 1.02, 1.02);
+    }
+    img{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        width: 100%;
+        object-fit: cover;
+        height: 196px;
+    }
+    .contents-category{
+        padding: 11px 12px 8px 11px;
+        h2{
+            color: $color2;
+            font-size: $roboto-bold-20;
+            font-weight: $roboto-bold-20-font-weight;
+        }
+        p{
+            color: $color3;
+            font-size: $roboto-bold-14;
+            font-weight: $roboto-bold-14-font-weight;
+        }
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .container-card-category {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container-category{
+        padding: 30px;
+    }
+    .card-category{
+        width: 347px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-category{
+        padding: 11px;
+    }
+    .container-card-category{
+        grid-template-columns: repeat(1 , 1fr);
+    }
+    .card-category{
+        width: 100%;
+        max-width: 392px;
+    }
+    
+}

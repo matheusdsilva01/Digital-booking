@@ -1,0 +1,162 @@
+@import "../../variables/colors.scss";
+@import "../../variables/typography.scss";
+
+
+
+#RegisterForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 57px;
+    min-height: calc(100vh - 80px);
+    .container-form{
+        max-width: 448px;
+        min-width: 300px;
+        width: 100%;
+        h1{
+            font-size: $roboto-bold-24;
+            font-weight: $roboto-bold-24-font-weight;
+            margin-bottom: 0;
+            text-align: center;
+            color: #1DBEB4;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .nome-sobrenome{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+            .input-box{
+                box-sizing: border-box;
+                margin-top: 15px;
+                .error-message{
+                    visibility: hidden;
+                }
+            }
+                .input-box.name,
+                .input-box.lastname{
+                    width: 217px;
+                }
+                .input-box.email,.input-box.password,.input-box.checkpass{
+                    width: 100%;
+                }
+                .input-box input{
+                    border: 1px solid transparent;
+                    padding: 13px 0 14px 14px;
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    border-radius: 5px;
+                    box-shadow: 0 1px 5px #00000050;
+                    padding-left: 15px;
+                    padding-right: 48px;
+                    font-size: 16px;
+                }
+                .input-box.password{
+                    position: relative;
+                    a{
+                    position: absolute;
+                    top: 39%;
+                    right: 12px;
+                        img{
+                            display: flex;
+                        }
+                    }
+                    #invisible{
+                        display: none;
+                    }
+                }
+                input.error{
+                    background-color: #FFE1E1;
+                    border: 1px solid #FF0000 !important;
+                    ~ .error-message{
+                        display: flex;
+                        color: #FF0000;
+                    }
+                }
+            .btn{
+                margin-top: 51px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                button{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    height: 40px;
+                    width: 206px;
+                    outline: none;
+                    background-color: $color-principal;
+                    border-radius: 10px;
+                    color: white;
+                    font-size: 100%;
+                    border: none;
+                    &:hover{
+                        background-color: #0d6efd;
+                    }
+                }
+                p{ 
+                    margin-top: 18px;
+                    a{
+                    color: #4285F4;
+                }}
+            }
+        }
+    }
+
+    .container-form{
+        form .user-details{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    #RegisterForm{
+        font-size: $roboto-medio-12;
+        font-weight: $roboto-medio-12-font-weight;
+        .title{
+            margin-top: 32px;
+        }
+        .btn{
+            width: 100%;
+            padding: 0;
+            margin-top: 10px !important;
+            button{
+                width: 100% !important;
+            }
+            p{
+                margin-top: 7px !important;
+            }
+        }
+        input{
+            padding: 9px 0 7px 14px !important;
+            font-size: $roboto-medio-12 !important;
+            font-weight: $roboto-medio-12-font-weight !important;
+        }
+        .input-box{
+            margin-top: 0 !important;
+        }
+        .nome-sobrenome{
+            display: block !important;
+        }
+        .input-box.name, .input-box.lastname{
+            width: 100% !important;
+        }
+        .input-box.password a {
+            top: 35% !important;
+        }
+        bottom: 100%;
+        footer{
+            margin-top: 8px !important;
+        }
+    }
+}

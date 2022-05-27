@@ -1,0 +1,147 @@
+@import '../../variables/colors.scss';
+@import '../../variables/typography.scss';
+
+.datalist{
+    display: none;
+    position: absolute;
+    background-color: white;
+    border-radius: 0 0 5px 5px;
+    width: calc(100% - 10px);
+    padding: 0 5px 16px 15px;
+    max-height: 10rem;
+    overflow-y: auto;
+    top: 115%;
+    margin-left: 10px;
+    z-index: 10;
+    box-shadow: 0 4px 4px #00000025;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    .option {
+        display: flex;
+        background-color: white;
+        padding: 11px 0 11px 0;
+        color: #000;
+        border-bottom: 1px $color-principal solid;
+        font-size: $roboto-bold-16;
+        font-weight: $roboto-bold-16-font-weight;
+        cursor: pointer;
+        .contents{
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+        }
+        img{
+            pointer-events: none;
+            margin-right: 20px;
+        }
+        span{
+            font-size: $roboto-bold-14;
+            font-weight: $roboto-bold-14-font-weight;
+            pointer-events: none;
+            color: $color3;
+        }
+    }
+  }
+#container-search{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 15px;
+    width: 100%;
+    height: 151px;
+    color: $white;
+    font-size: 26px;
+    background-color: $color3;
+    h1{
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .inputs{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        .container-destino, .container-date{
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 442px;
+            a{
+                position: absolute;
+                left: 20px;
+                top: -2px;
+                z-index: 1;
+            }
+        }
+        input{
+            width: 100%;
+            border: none;
+            margin-left: 10px;
+            padding: 8px 35px;
+            border-radius: 5px;
+            height: 40px;
+            font-size: $roboto-medium-14;
+            font-weight: $roboto-bold-14-font-weight;
+        }
+    }
+    button#confirm-search{
+        border: none;
+        margin-left: 10px;
+        border-radius: 5px;
+        width: 206px;
+        height: 40px;
+        background-color: $color-principal;
+        color: $white;
+        font-size: $roboto-bold-16;
+        font-weight: $roboto-bold-16-font-weight;
+    }
+}
+
+// responsividade tablet
+@media (min-width: 768px) and (max-width: 1366px) {
+
+    .container-date, .container-destino{
+        width: 254px;
+    }
+}
+
+// responsividade mobile
+@media (max-width: 768px) {
+    .datalist{
+        width: 100%;
+        margin-left: 0;
+        .option{
+            font-size: $roboto-bold-14;
+            font-weight: $roboto-bold-14-font-weight;
+        }
+    }
+    #container-search{
+        height: 263px;
+        h1{
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 14px;
+        }
+        .inputs{
+            flex-direction: column;
+            width: 100%;
+            .container-date, .container-destino{
+                width: 100%;
+                margin-bottom: 10px;
+                a{
+                    left: 8px;
+                }
+            }
+            input{
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+        button#confirm-search{
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+}
