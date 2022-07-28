@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://api-digital-booking-production.up.railway.app/api/'
+    baseURL: 'https://api-digitalbooking.herokuapp.com/api/'
 });
 
 export default api;
